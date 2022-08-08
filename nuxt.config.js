@@ -64,6 +64,9 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     treeShake: true,
     theme: {
+      options: {
+        customProperties: true,
+      },
       dark: false,
       themes: {
         dark: {
@@ -74,6 +77,9 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
+        },
+        light: {
+          background: '#EFEDFB',
         },
       },
     },
