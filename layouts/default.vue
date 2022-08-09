@@ -2,37 +2,58 @@
   <v-app>
     <!-- navigation bar -->
     <v-navigation-drawer permanent app>
-      <v-list flat dense nav class="ml-1 full-height">
-        <v-list-item>
-          <v-list-item-icon class="mr-4">
-            <v-icon>mdi-cog</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Logo</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+      <div class="wrapper d-flex flex-column">
+        <v-list flat dense nav class="mb-2">
+          <v-list-item link :ripple="false">
+            <v-list-item-icon class="mr-4">
+              <v-img
+                height="30"
+                width="30"
+                contain
+                :src="require('@/assets/images/logo.svg')"
+              ></v-img>
 
-        <div class="spacer-box-1"></div>
+              <div
+                class="ml-3 text-subtitle-1 font-weight-bold blue-grey-text text-darken-4 logo-txt-color"
+                v-text="'EduCore'"
+              ></div>
+            </v-list-item-icon>
+          </v-list-item>
+        </v-list>
 
-        <v-list-item
-          v-for="(item, index) in items"
-          :key="index"
-          :ripple="false"
-          :input-value="id === item.id"
-          active-class="link-active"
-          link
-          class="link"
-          @click="setCurrentLinkId(item.id)"
-        >
-          <v-list-item-icon class="mr-4">
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+        <v-list flat dense nav>
+          <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
+            :ripple="false"
+            :input-value="id === item.id"
+            active-class="link-active"
+            link
+            class="link"
+            @click="setCurrentLinkId(item.id)"
+          >
+            <v-list-item-icon class="mr-4">
+              <v-icon :color="id === item.id ? '' : '#CBCBCB'">{{
+                item.icon
+              }}</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+            <v-list-item-content>
+              <v-list-item-title :class="id === item.id ? '' : 'grey-color'">{{
+                item.title
+              }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+
+        <v-list class="mt-auto">
+          <v-list-item>
+            <v-list-item-content>
+              <LayoutsClass />
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </div>
     </v-navigation-drawer>
     <!--  -->
   </v-app>
@@ -44,7 +65,7 @@ export default {
 
   data() {
     return {
-      id: null,
+      id: 0,
       items: [
         { id: 0, title: 'Home', icon: 'mdi-home-variant-outline' },
         { id: 1, title: 'Inbox', icon: 'mdi-inbox' },
@@ -65,8 +86,16 @@ export default {
 </script>
 
 <style scoped>
-.full-height {
-  height: 100vh;
+.grey-color {
+  color: #cbcbcb;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.logo-txt-color {
+  color: #2a2b50;
 }
 
 .link:hover {
@@ -75,10 +104,5 @@ export default {
 
 .link-active {
   color: #5a58bd;
-}
-
-.spacer-box-1 {
-  height: 2vh;
-  width: 100%;
 }
 </style>
