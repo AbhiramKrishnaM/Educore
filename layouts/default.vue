@@ -30,6 +30,7 @@
             active-class="link-active"
             link
             class="link"
+            :to="item.to"
             @click="setCurrentLinkId(item.id)"
           >
             <v-list-item-icon class="mr-4">
@@ -55,6 +56,10 @@
         </v-list>
       </div>
     </v-navigation-drawer>
+
+    <v-main>
+      <Nuxt />
+    </v-main>
     <!--  -->
   </v-app>
 </template>
@@ -67,13 +72,23 @@ export default {
     return {
       id: 0,
       items: [
-        { id: 0, title: 'Home', icon: 'mdi-home-variant-outline' },
-        { id: 1, title: 'Inbox', icon: 'mdi-inbox' },
-        { id: 2, title: 'Class', icon: 'mdi-video-box' },
-        { id: 3, title: 'Students', icon: 'mdi-account-school' },
-        { id: 4, title: 'Tests', icon: 'mdi-book-open-page-variant' },
-        { id: 5, title: 'Files', icon: 'mdi-file-settings' },
-        { id: 6, title: 'Settings', icon: 'mdi-cog' },
+        { id: 0, title: 'Home', icon: 'mdi-home-variant-outline', to: '/home' },
+        { id: 1, title: 'Inbox', icon: 'mdi-inbox', to: '/inbox' },
+        { id: 2, title: 'Class', icon: 'mdi-video-box', to: '/class' },
+        {
+          id: 3,
+          title: 'Students',
+          icon: 'mdi-account-school',
+          to: '/students',
+        },
+        {
+          id: 4,
+          title: 'Tests',
+          icon: 'mdi-book-open-page-variant',
+          to: '/tests',
+        },
+        { id: 5, title: 'Files', icon: 'mdi-file-settings', to: '/files' },
+        { id: 6, title: 'Settings', icon: 'mdi-cog', to: '/settings' },
       ],
     }
   },
