@@ -45,7 +45,6 @@ h1 {
   border-radius: 35px;
   position: relative;
   overflow: hidden;
-  z-index: -2;
 }
 
 .common {
@@ -83,6 +82,10 @@ h1 {
 }
 
 .shadow-default {
-  box-shadow: 5px 5px;
+  box-shadow: 5px 5px black;
+}
+
+.shadow-default:hover {
+  box-shadow: none;
 }
 </style>
