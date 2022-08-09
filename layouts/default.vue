@@ -33,7 +33,7 @@
             @click="setCurrentLinkId(item.id)"
           >
             <v-list-item-icon class="mr-4">
-              <v-icon :color="id === item.id ? '' : '#CBCBCB'">{{
+              <v-icon :class="id === item.id ? '' : 'grey-color'">{{
                 item.icon
               }}</v-icon>
             </v-list-item-icon>
