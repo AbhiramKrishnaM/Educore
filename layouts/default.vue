@@ -65,7 +65,9 @@
       max-width="85%"
       class="ml-3"
     >
-      <v-toolbar-title>Title</v-toolbar-title>
+      <v-toolbar-title class="text-h5 font-weight-medium"
+        >Good Morning, Monica</v-toolbar-title
+      >
 
       <v-spacer></v-spacer>
 
