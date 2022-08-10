@@ -56,7 +56,24 @@
         </v-list>
       </div>
     </v-navigation-drawer>
+    <!-- app bar -->
+    <v-app-bar
+      absolute
+      color="transparent"
+      app
+      flat
+      max-width="85%"
+      class="ml-3"
+    >
+      <v-toolbar-title>Title</v-toolbar-title>
 
+      <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+    </v-app-bar>
+    <!--  -->
     <v-main>
       <Nuxt />
     </v-main>
