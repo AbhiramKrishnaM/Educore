@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <!-- navigation bar -->
-    <v-navigation-drawer permanent app>
+
+    <v-navigation-drawer v-model="drawer" app>
       <div class="wrapper d-flex flex-column">
         <v-list flat dense nav class="mb-2">
           <v-list-item link :ripple="false">
@@ -66,13 +67,13 @@
       class="ml-3"
     >
       <v-toolbar-title class="text-h5 font-weight-medium"
-        >Good Morning, Monica</v-toolbar-title
+        >Good Morning, Monica 👋</v-toolbar-title
       >
 
       <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+      <v-btn depressed min-width="20" class="rounded-lg">
+        <v-icon color="#858283">mdi-bell-outline</v-icon>
       </v-btn>
     </v-app-bar>
     <!--  -->
@@ -90,6 +91,7 @@ export default {
   data() {
     return {
       id: 0,
+      drawer: true,
       items: [
         { id: 0, title: 'Home', icon: 'mdi-home-variant-outline', to: '/home' },
         { id: 1, title: 'Inbox', icon: 'mdi-inbox', to: '/inbox' },
