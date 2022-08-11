@@ -15,7 +15,7 @@ export default {
   }
 
   100% {
-    width: 30vmin;
+    width: 60vmin;
     opacity: 0;
   }
 }
@@ -25,6 +25,7 @@ export default {
 .firework::after {
   --top: 60vh;
 
+  opacity: 0;
   content: '';
   position: absolute;
   top: 50%;
@@ -46,7 +47,7 @@ export default {
     radial-gradient(circle, var(--color) 0.5vmin, #0000 0) 13% 24%;
   background-size: 0.5vmin 0.5vmin;
   background-repeat: no-repeat;
-  animation: firework 2s infinite;
+  animation: firework linear 1s 1;
 }
 
 .firework::before {

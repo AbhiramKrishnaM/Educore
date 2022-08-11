@@ -3,11 +3,23 @@
     <div class="circle-1 common"></div>
     <div class="circle-2 common"></div>
     <div class="circle-3 common"></div>
-    <div class="firework-1 firework"><UiFirework color="red" /></div>
-    <div class="firework-2 firework"><UiFirework color="white" /></div>
-    <div class="firework-3 firework"><UiFirework color="violet" /></div>
-    <div class="firework-4 firework"><UiFirework color="purple" /></div>
-    <div class="firework-5 firework"><UiFirework color="green" /></div>
+    <div v-if="isAnimate">
+      <div class="firework-1 firework">
+        <UiFirework color="red" />
+      </div>
+      <div class="firework-2 firework">
+        <UiFirework color="white" />
+      </div>
+      <div class="firework-3 firework">
+        <UiFirework color="violet" />
+      </div>
+      <div class="firework-4 firework">
+        <UiFirework color="purple" />
+      </div>
+      <div class="firework-5 firework">
+        <UiFirework color="green" />
+      </div>
+    </div>
 
     <!-- <UiFirework class="firework-2" /> -->
     <!-- <UiFirework class="firework-2" /> -->
@@ -29,6 +41,7 @@
         depressed
         rounded
         class="shadow-default"
+        @click="createClass"
         v-text="'Create class'"
       ></v-btn>
     </section>
@@ -37,6 +50,24 @@
 <script>
 export default {
   name: 'ClassComponent',
+  data() {
+    return {
+      isAnimate: false,
+    }
+  },
+  methods: {
+    reset(time) {
+      setTimeout(() => {
+        this.isAnimate = false
+      }, time)
+    },
+
+    createClass() {
+      this.isAnimate = true
+
+      this.reset(1000)
+    },
+  },
 }
 </script>
 
