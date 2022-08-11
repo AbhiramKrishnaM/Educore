@@ -2,7 +2,11 @@
   <v-app>
     <!-- navigation bar -->
 
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer
+      v-model="drawer"
+      :permanent="$vuetify.breakpoint.mdAndUp"
+      app
+    >
       <div class="wrapper d-flex flex-column">
         <v-list flat dense nav class="mb-2">
           <v-list-item link :ripple="false">
@@ -58,18 +62,16 @@
       </div>
     </v-navigation-drawer>
     <!-- app bar -->
-    <v-app-bar
-      absolute
-      color="transparent"
-      app
-      flat
-      max-width="85%"
-      class="ml-3"
-    >
+    <v-app-bar absolute color="transparent" app flat class="ml-3">
+      <v-app-bar-nav-icon
+        class="d-md-none"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
+
+      <v-spacer class="d-md-none"></v-spacer>
       <v-toolbar-title class="text-h5 font-weight-medium"
         >Good Morning, Monica 👋</v-toolbar-title
       >
-
       <v-spacer></v-spacer>
 
       <v-btn depressed min-width="20" class="rounded-lg">
@@ -91,7 +93,7 @@ export default {
   data() {
     return {
       id: 0,
-      drawer: true,
+      drawer: false,
       items: [
         { id: 0, title: 'Home', icon: 'mdi-home-variant-outline', to: '/home' },
         { id: 1, title: 'Inbox', icon: 'mdi-inbox', to: '/inbox' },
@@ -113,6 +115,13 @@ export default {
       ],
     }
   },
+
+  computed: {
+    mobile() {
+      return !this.$vuetify.breakpoint.smAndDown
+    },
+  },
+
   methods: {
     setCurrentLinkId(id) {
       this.id = id
