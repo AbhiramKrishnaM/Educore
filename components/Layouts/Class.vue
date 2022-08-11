@@ -3,7 +3,14 @@
     <div class="circle-1 common"></div>
     <div class="circle-2 common"></div>
     <div class="circle-3 common"></div>
+    <div class="firework-1 firework"><UiFirework color="red" /></div>
+    <div class="firework-2 firework"><UiFirework color="white" /></div>
+    <div class="firework-3 firework"><UiFirework color="violet" /></div>
+    <div class="firework-4 firework"><UiFirework color="purple" /></div>
+    <div class="firework-5 firework"><UiFirework color="green" /></div>
 
+    <!-- <UiFirework class="firework-2" /> -->
+    <!-- <UiFirework class="firework-2" /> -->
     <section
       class="white--text d-flex flex-column align-center justify-space-around text-center"
     >
@@ -87,5 +94,34 @@ h1 {
 
 .shadow-default:hover {
   box-shadow: none;
+}
+
+.firework {
+  position: absolute;
+}
+
+.firework-1 {
+  top: 70%;
+  left: 35%;
+}
+
+.firework-2 {
+  top: 70%;
+  right: 15%;
+}
+
+.firework-3 {
+  top: 95%;
+  left: 50%;
+}
+
+.firework-4 {
+  top: 82%;
+  left: 20%;
+}
+
+.firework-5 {
+  top: 72%;
+  right: 30%;
 }
 </style>

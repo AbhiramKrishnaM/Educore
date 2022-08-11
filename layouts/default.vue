@@ -69,9 +69,15 @@
       ></v-app-bar-nav-icon>
 
       <v-spacer class="d-md-none"></v-spacer>
-      <v-toolbar-title class="text-h5 font-weight-medium"
+      <v-toolbar-title
+        :class="{
+          'text-h5': $vuetify.breakpoint.smAndDown,
+          'text-h4': $vuetify.breakpoint.mdAndUp,
+        }"
+        class="font-weight-medium"
         >Good Morning, Monica 👋</v-toolbar-title
       >
+
       <v-spacer></v-spacer>
 
       <v-btn depressed min-width="20" class="rounded-lg">
