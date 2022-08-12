@@ -101,7 +101,7 @@ export default {
       id: 0,
       drawer: false,
       items: [
-        { id: 0, title: 'Home', icon: 'mdi-home-variant-outline', to: '/home' },
+        { id: 0, title: 'Home', icon: 'mdi-home-variant-outline', to: '/' },
         { id: 1, title: 'Inbox', icon: 'mdi-inbox', to: '/inbox' },
         { id: 2, title: 'Class', icon: 'mdi-video-box', to: '/class' },
         {
