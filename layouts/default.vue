@@ -62,7 +62,7 @@
       </div>
     </v-navigation-drawer>
     <!-- app bar -->
-    <v-app-bar absolute color="transparent" app flat class="ml-3">
+    <v-app-bar absolute color="transparent" app flat class="px-3">
       <v-app-bar-nav-icon
         class="d-md-none"
         @click.stop="drawer = !drawer"

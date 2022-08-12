@@ -1,6 +1,6 @@
 <template>
-  <v-container class="mt-5">
-    <section class="grid-wrap">
+  <v-container fluid class="mt-5">
+    <section class="grid-wrap px-3">
       <HomeHeader class="grid-column-span-3" />
       <HomeUserInfo class="grid-column-span-1 grid-row-span-5" />
 
