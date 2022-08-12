@@ -103,7 +103,6 @@ h1 {
 }
 
 .circle-3 {
-  z-index: -1;
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, 60%);
