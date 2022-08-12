@@ -5,19 +5,19 @@
     <div class="circle-3 common"></div>
     <div>
       <div class="firework-1 firework">
-        <UIFirework color="red" />
+        <UiFirework color="red" />
       </div>
       <div class="firework-2 firework">
-        <UIFirework color="white" />
+        <UiFirework color="white" />
       </div>
       <div class="firework-3 firework">
-        <UIFirework color="violet" />
+        <UiFirework color="violet" />
       </div>
       <div class="firework-4 firework">
-        <UIFirework color="purple" />
+        <UiFirework color="purple" />
       </div>
       <div class="firework-5 firework">
-        <UIFirework color="green" />
+        <UiFirework color="green" />
       </div>
     </div>
 
