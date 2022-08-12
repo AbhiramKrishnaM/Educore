@@ -47,7 +47,7 @@ export default {
     radial-gradient(circle, var(--color) 0.5vmin, #0000 0) 13% 24%;
   background-size: 0.5vmin 0.5vmin;
   background-repeat: no-repeat;
-  animation: firework linear 1s 1;
+  animation: firework linear 1s infinite;
 }
 
 .firework::before {
