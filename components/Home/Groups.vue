@@ -3,13 +3,11 @@
 </template>
 <script>
 export default {
-  name: 'HomeHeader',
+  name: 'HomeGroups',
 }
 </script>
 <style scoped>
 .wrapper {
-  width: 100%;
-  background-color: orange;
-  height: 20vh;
+  background: pink;
 }
 </style>

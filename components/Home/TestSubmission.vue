@@ -3,13 +3,11 @@
 </template>
 <script>
 export default {
-  name: 'HomeHeader',
+  name: 'HomeTestSubmission',
 }
 </script>
 <style scoped>
 .wrapper {
-  width: 100%;
-  background-color: orange;
-  height: 20vh;
+  background: red;
 }
 </style>
