@@ -3,7 +3,7 @@
     <div class="circle-1 common"></div>
     <div class="circle-2 common"></div>
     <div class="circle-3 common"></div>
-    <div>
+    <div v-if="isAnimate">
       <div class="firework-1 firework">
         <UIFirework color="red" />
       </div>
