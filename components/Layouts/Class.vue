@@ -5,24 +5,22 @@
     <div class="circle-3 common"></div>
     <div v-if="isAnimate">
       <div class="firework-1 firework">
-        <UiFirework color="red" />
+        <UIFirework color="red" />
       </div>
       <div class="firework-2 firework">
-        <UiFirework color="white" />
+        <UIFirework color="white" />
       </div>
       <div class="firework-3 firework">
-        <UiFirework color="violet" />
+        <UIFirework color="violet" />
       </div>
       <div class="firework-4 firework">
-        <UiFirework color="purple" />
+        <UIFirework color="purple" />
       </div>
       <div class="firework-5 firework">
-        <UiFirework color="green" />
+        <UIFirework color="green" />
       </div>
     </div>
 
-    <!-- <UiFirework class="firework-2" /> -->
-    <!-- <UiFirework class="firework-2" /> -->
     <section
       class="white--text d-flex flex-column align-center justify-space-around text-center"
     >
