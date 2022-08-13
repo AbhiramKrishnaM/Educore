@@ -13,7 +13,11 @@
     <v-col sm="4" class="border-right px-3 py-2">
       <span> <slot name="deadline">Date Of Submission</slot></span>
     </v-col>
-    <v-col sm="3" class="border-right px-3 py-2"><h1>Status</h1></v-col>
+    <v-col sm="3" class="border-right px-3 py-2">
+      <UiChip>
+        <template #{chip}> </template>
+      </UiChip>
+    </v-col>
     <v-col sm="1" class="border-right px-3 py-2">
       <v-btn icon plain> <v-icon color="success">mdi-download</v-icon></v-btn>
     </v-col>
@@ -32,6 +36,7 @@ export default {
   data() {
     return {
       isViewed: false,
+      chip: 'completed',
     }
   },
 }
