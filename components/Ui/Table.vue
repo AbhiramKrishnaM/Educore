@@ -11,9 +11,11 @@
     </v-row>
 
     <UiTableBody>
-      <template #avatar>
+      <template #studentAvatar>
         <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
       </template>
+      <template #studentName> Abhiram krishna </template>
+      <template #deadline> December 17, 2021 </template>
     </UiTableBody>
   </div>
 </template>

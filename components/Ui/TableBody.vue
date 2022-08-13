@@ -3,23 +3,37 @@
     <v-col sm="3" class="border-right px-3 py-2">
       <h1>
         <v-avatar size="35" class="mr-2">
-          <slot name="avatar">
+          <slot name="studentAvatar">
             <v-img :src="require('@/assets/images/placeholder.png')"></v-img>
-          </slot> </v-avatar
-        >Name
+          </slot>
+        </v-avatar>
+        <slot name="studentName"> Name </slot>
       </h1>
     </v-col>
-    <v-col sm="4" class="border-right px-3 py-2"
-      ><h1>Date Of Submission</h1></v-col
-    >
+    <v-col sm="4" class="border-right px-3 py-2">
+      <span> <slot name="deadline">Date Of Submission</slot></span>
+    </v-col>
     <v-col sm="3" class="border-right px-3 py-2"><h1>Status</h1></v-col>
-    <v-col sm="1" class="border-right px-3 py-2"></v-col>
-    <v-col sm="1"></v-col>
+    <v-col sm="1" class="border-right px-3 py-2">
+      <v-btn icon plain> <v-icon color="success">mdi-download</v-icon></v-btn>
+    </v-col>
+    <v-col sm="1" class="px-3 py-2">
+      <v-btn icon plain @click="isViewed = !isViewed">
+        <v-icon>{{
+          isViewed ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
+        }}</v-icon></v-btn
+      >
+    </v-col>
   </v-row>
 </template>
 <script>
 export default {
   name: 'TableBodyUI',
+  data() {
+    return {
+      isViewed: false,
+    }
+  },
 }
 </script>
 <style scoped>
@@ -34,5 +48,11 @@ export default {
 h1 {
   font-size: 18px;
   color: #4a5258;
+}
+
+span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #c2c2c2;
 }
 </style>
