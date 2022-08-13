@@ -7,15 +7,14 @@
 
         <v-menu
           transition="slide-x-transition"
-          :close-on-click="false"
           nudge-left="60"
           nudge-bottom="10"
           bottom
           offset-y
         >
           <template #activator="{ on, attrs }">
-            <v-btn icon
-              ><v-icon color="#DBDBDB" v-bind="attrs" v-on="on"
+            <v-btn plain icon
+              ><v-icon color="#C2C2C2" v-bind="attrs" v-on="on"
                 >mdi-chevron-down</v-icon
               ></v-btn
             >
@@ -53,6 +52,6 @@ export default {
 
 span {
   font-weight: bold;
-  color: #dbdbdb;
+  color: #c2c2c2;
 }
 </style>
