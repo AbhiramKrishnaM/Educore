@@ -9,6 +9,12 @@
       <v-col sm="1" class="border-right px-3 py-2"></v-col>
       <v-col sm="1"></v-col>
     </v-row>
+
+    <UiTableBody>
+      <template #avatar>
+        <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
+      </template>
+    </UiTableBody>
   </div>
 </template>
 <script>
@@ -26,11 +32,12 @@ export default {
 }
 
 .head {
-  /* background: #f8f9fd; */
+  background: #f8f9fd;
   border: 1px solid #ececec;
 }
 
 h1 {
   font-size: 18px;
+  color: #4a5258;
 }
 </style>
