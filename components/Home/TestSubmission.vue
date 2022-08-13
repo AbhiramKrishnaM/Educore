@@ -28,6 +28,7 @@
         </v-menu>
       </span>
     </div>
+    <UiTable />
   </div>
 </template>
 <script>
