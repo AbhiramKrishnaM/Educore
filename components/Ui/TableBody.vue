@@ -10,13 +10,11 @@
         <slot name="studentName"> Name </slot>
       </h1>
     </v-col>
-    <v-col sm="4" class="border-right px-3 py-2">
+    <v-col sm="4" class="border-right px-3 py-3">
       <span> <slot name="deadline">Date Of Submission</slot></span>
     </v-col>
     <v-col sm="3" class="border-right px-3 py-2">
-      <UiChip>
-        <template #{chip}> </template>
-      </UiChip>
+      <UiChip chip-type="opened" />
     </v-col>
     <v-col sm="1" class="border-right px-3 py-2">
       <v-btn icon plain> <v-icon color="success">mdi-download</v-icon></v-btn>
@@ -56,7 +54,7 @@ h1 {
 }
 
 span {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   color: #c2c2c2;
 }
