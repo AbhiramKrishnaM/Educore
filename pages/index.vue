@@ -1,14 +1,39 @@
 <template>
   <v-container fluid class="mt-5">
     <section class="grid-wrap px-3">
-      <HomeHeader class="grid-column-span-3" />
-      <HomeUserInfo class="grid-column-span-1 grid-row-span-5" />
+      <HomeHeader
+        :class="{
+          'grid-column-span-3': $vuetify.breakpoint.mdAndUp,
+          'grid-column-span-full': $vuetify.breakpoint.smAndDown,
+        }"
+      />
+      <HomeUserInfo
+        :class="{
+          'grid-column-span-1 grid-row-span-5': $vuetify.breakpoint.mdAndUp,
+          'grid-column-span-2 grid-row-3-2': $vuetify.breakpoint.smAndDown,
+        }"
+      />
 
-      <HomeTestSubmission class="grid-column-span-3 grid-row-span-2" />
+      <HomeTestSubmission
+        :class="{
+          'grid-column-span-3 grid-row-span-2': $vuetify.breakpoint.mdAndUp,
+          'grid-column-span-full': $vuetify.breakpoint.smAndDown,
+        }"
+      />
 
-      <HomeTopStudent class="grid-column-span-1 grid-row-span-2" />
+      <HomeTopStudent
+        :class="{
+          'grid-column-span-1 grid-row-span-2': $vuetify.breakpoint.mdAndUp,
+          'grid-column-span-2 grid-row-span-2': $vuetify.breakpoint.smAndDown,
+        }"
+      />
 
-      <HomeGroups class="grid-column-span-2 grid-row-span-2" />
+      <HomeGroups
+        :class="{
+          'grid-column-span-2 grid-row-span-2': $vuetify.breakpoint.mdAndUp,
+          'grid-column-span-full': $vuetify.breakpoint.smAndDown,
+        }"
+      />
     </section>
   </v-container>
 </template>
@@ -46,11 +71,19 @@ export default {
   grid-column: span 3;
 }
 
+.grid-column-span-full {
+  grid-column: span 4;
+}
+
 .grid-row-span-2 {
   grid-row: span 2;
 }
 
 .grid-row-span-5 {
   grid-row: span 5;
+}
+
+.grid-row-3-2 {
+  grid-row: 3 / span 2;
 }
 </style>
