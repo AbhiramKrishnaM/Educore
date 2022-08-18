@@ -9,20 +9,21 @@
       <v-col sm="1" class="border-right px-3 py-2"></v-col>
       <v-col sm="1"></v-col>
     </v-row>
-
-    <UiTableBody
-      v-for="(submission, index) in studentSubmissions"
-      :key="index"
-      :submission-array-length="studentSubmissions.length"
-      :item-index="index"
-      :status="submission.status"
-    >
-      <template #studentAvatar>
-        <v-img :src="submission.student_details.avatar" alt="avatar"></v-img>
-      </template>
-      <template #studentName> {{ submission.student_name }} </template>
-      <template #deadline>{{ submission.submission_date }}</template>
-    </UiTableBody>
+    <div class="table-body-wrapper">
+      <UiTableBody
+        v-for="(submission, index) in studentSubmissions"
+        :key="index"
+        :submission-array-length="studentSubmissions.length"
+        :item-index="index"
+        :status="submission.status"
+      >
+        <template #studentAvatar>
+          <v-img :src="submission.student_details.avatar" alt="avatar"></v-img>
+        </template>
+        <template #studentName> {{ submission.student_name }} </template>
+        <template #deadline>{{ submission.submission_date }}</template>
+      </UiTableBody>
+    </div>
   </div>
 </template>
 <script>
@@ -83,5 +84,10 @@ export default {
 h1 {
   font-size: 18px;
   color: #4a5258;
+}
+
+.table-body-wrapper {
+  height: 20vh;
+  overflow-y: scroll;
 }
 </style>
