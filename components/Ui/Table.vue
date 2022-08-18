@@ -17,10 +17,12 @@
         :item-index="index"
         :status="submission.status"
       >
-        <template #studentAvatar>
+        <template #student-avatar>
           <v-img :src="submission.student_details.avatar" alt="avatar"></v-img>
         </template>
-        <template #studentName> {{ submission.student_name }} </template>
+        <template #student-name>
+          {{ submission.student_details.student_name }}
+        </template>
         <template #deadline>{{ submission.submission_date }}</template>
       </UiTableBody>
     </div>
@@ -34,30 +36,30 @@ export default {
       studentSubmissions: [
         {
           id: 0,
-          student_name: 'Abhiram krishna',
           submission_date: 'December 17, 2021',
           status: 'opened',
           student_details: {
+            student_name: 'Abhiram krishna',
             avatar:
               'https://cdn.pixabay.com/photo/2021/11/12/03/04/woman-6787784_960_720.png',
           },
         },
         {
-          id: 2,
-          student_name: 'Hari',
+          id: 1,
           submission_date: 'March 22, 2021',
           status: 'active',
           student_details: {
+            student_name: 'Hari',
             avatar:
               'https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295429_960_720.png',
           },
         },
         {
-          id: 3,
-          student_name: 'Fahid Hassan',
+          id: 2,
           submission_date: 'January 1, 2021',
           status: 'completed',
           student_details: {
+            student_name: 'Fahid Hassan',
             avatar:
               'https://cdn.pixabay.com/photo/2020/11/22/22/17/male-5768177_960_720.png',
           },

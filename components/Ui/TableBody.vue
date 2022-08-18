@@ -9,11 +9,11 @@
     <v-col sm="3" class="border-right px-3 py-2">
       <h1>
         <v-avatar size="35" class="mr-2">
-          <slot name="studentAvatar">
+          <slot name="student-avatar">
             <v-img :src="require('@/assets/images/placeholder.png')"></v-img>
           </slot>
         </v-avatar>
-        <slot name="studentName"> Name </slot>
+        <slot name="student-name"> Name </slot>
       </h1>
     </v-col>
     <v-col sm="4" class="border-right px-3 py-3">
