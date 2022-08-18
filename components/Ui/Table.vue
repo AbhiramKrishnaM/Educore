@@ -87,7 +87,8 @@ h1 {
 }
 
 .table-body-wrapper {
-  height: 20vh;
+  min-height: max-content;
+  max-height: 20vh;
   overflow-y: scroll;
 }
 </style>

@@ -22,10 +22,10 @@
     <v-col sm="3" class="border-right px-3 py-2">
       <UiChip :chip-type="status" />
     </v-col>
-    <v-col sm="1" class="border-right px-3 py-2">
+    <v-col sm="1" class="border-right px-3 py-2 d-flex justify-center">
       <v-btn icon plain> <v-icon color="success">mdi-download</v-icon></v-btn>
     </v-col>
-    <v-col sm="1" class="px-3 py-2">
+    <v-col sm="1" class="px-3 py-2 d-flex justify-center">
       <v-btn icon plain @click="isViewed = !isViewed">
         <v-icon>{{
           isViewed ? 'mdi-eye-off-outline' : 'mdi-eye-outline'
