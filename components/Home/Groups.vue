@@ -7,7 +7,11 @@
     </UiComponentNav>
 
     <div class="d-flex flex-column minimum-height pa-2">
-      <UiGroupCard v-for="(group, index) in groups" :key="index">
+      <UiGroupCard
+        v-for="(group, index) in groups"
+        :key="index"
+        :new-notification-count="group.group_info.notifcation_count"
+      >
         <template #group-avatar>
           <v-img :src="group.group_info.avatar" alt="group avatar"></v-img>
         </template>
@@ -31,6 +35,7 @@ export default {
           group_info: {
             avatar:
               'https://images.pexels.com/photos/1703314/pexels-photo-1703314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            notifcation_count: 3,
           },
         },
         {
@@ -40,6 +45,7 @@ export default {
           group_info: {
             avatar:
               'https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?cs=srgb&dl=pexels-belle-co-1000445.jpg&fm=jpg',
+            notifcation_count: 0,
           },
         },
       ],
