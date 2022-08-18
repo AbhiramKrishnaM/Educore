@@ -1,5 +1,11 @@
 <template>
-  <v-row no-gutters class="body">
+  <v-row
+    no-gutters
+    class="body"
+    :class="{
+      'rounded-br-lg rounded-bl-lg': itemIndex === submissionArrayLength - 1,
+    }"
+  >
     <v-col sm="3" class="border-right px-3 py-2">
       <h1>
         <v-avatar size="35" class="mr-2">
@@ -31,6 +37,10 @@
 <script>
 export default {
   name: 'TableBodyUI',
+  props: {
+    submissionArrayLength: { type: Number, required: true },
+    itemIndex: { type: Number, required: true },
+  },
   data() {
     return {
       isViewed: false,

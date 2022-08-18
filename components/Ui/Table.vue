@@ -10,7 +10,12 @@
       <v-col sm="1"></v-col>
     </v-row>
 
-    <UiTableBody>
+    <UiTableBody
+      v-for="(submission, index) in studentSubmissions"
+      :key="index"
+      :submission-array-length="studentSubmissions.length"
+      :item-index="index"
+    >
       <template #studentAvatar>
         <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
       </template>
@@ -22,6 +27,11 @@
 <script>
 export default {
   name: 'TableUI',
+  data() {
+    return {
+      studentSubmissions: [{}, {}, {}],
+    }
+  },
 }
 </script>
 <style scoped>
