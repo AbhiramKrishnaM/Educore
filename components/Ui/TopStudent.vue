@@ -51,6 +51,7 @@ export default {
 
 .shadow-default {
   box-shadow: 3px 3px #a09178;
+  transition: 0.3s;
 }
 
 .shadow-default:hover {

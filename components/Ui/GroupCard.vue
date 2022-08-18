@@ -6,7 +6,9 @@
     offset-x="20"
     offset-y="30"
   >
-    <div class="wrapper mt-4 pa-2 rounded-lg d-flex align-center">
+    <div
+      class="wrapper mt-4 pa-2 rounded-lg d-flex align-center shadow-default"
+    >
       <v-avatar rounded size="70" class="mr-2">
         <slot name="group-avatar">
           <v-img :src="require('@/assets/images/dummy-group.jpg')"></v-img>
@@ -33,6 +35,15 @@ export default {
 
 <style scoped>
 .wrapper {
-  background: #f9f8fd;
+  background-color: #f9f8fd;
+}
+
+.shadow-default {
+  box-shadow: 3px 3px #a09178;
+  transition: 0.3s;
+}
+
+.shadow-default:hover {
+  box-shadow: none;
 }
 </style>
