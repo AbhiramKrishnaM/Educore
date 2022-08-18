@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper pa-3">
+  <div class="wrapper pt-3">
     <v-row no-gutters class="head rounded-tr-lg rounded-tl-lg">
       <v-col sm="3" class="border-right px-3 py-2"> <h1>Name</h1> </v-col>
       <v-col sm="4" class="border-right px-3 py-2"
