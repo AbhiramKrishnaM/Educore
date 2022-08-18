@@ -4,9 +4,8 @@
       <h1>Enter some title</h1>
     </slot>
 
-    <span
+    <span v-show="optionClassDropDown"
       >Class 6th
-
       <v-menu
         transition="slide-x-transition"
         nudge-left="60"
@@ -29,11 +28,23 @@
         </v-list>
       </v-menu>
     </span>
+
+    <span v-show="optionViewAll">
+      View All
+      <v-btn plain icon
+        ><v-icon color="#C2C2C2">mdi-chevron-right</v-icon></v-btn
+      >
+    </span>
   </div>
 </template>
 <script>
 export default {
   name: 'ComponentNavUI',
+  props: {
+    optionClassDropDown: { type: Boolean, default: false },
+    optionViewAll: { type: Boolean, default: false },
+  },
+
   data() {
     return {
       items: [

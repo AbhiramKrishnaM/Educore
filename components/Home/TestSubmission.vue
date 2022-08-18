@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper rounded-xl pa-6">
-    <UiComponentNav>
+    <UiComponentNav :option-class-drop-down="true">
       <template #title>
         <h1>Submitted Tests</h1>
       </template>
