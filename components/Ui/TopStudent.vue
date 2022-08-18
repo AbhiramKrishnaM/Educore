@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper mt-4 pa-2 rounded-lg d-flex align-center">
+  <div class="wrapper mt-4 pa-2 rounded-lg d-flex align-center shadow-default">
     <div class="flex-item d-flex align-center">
       <v-avatar size="50" class="mr-2">
         <slot name="student-avatar">
@@ -46,7 +46,15 @@ export default {
 
 <style scoped>
 .wrapper {
-  background: #f9f8fd;
+  background-color: #f9f8fd;
+}
+
+.shadow-default {
+  box-shadow: 3px 3px #a09178;
+}
+
+.shadow-default:hover {
+  box-shadow: none;
 }
 
 .flex-item {

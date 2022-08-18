@@ -1,0 +1,37 @@
+<template>
+  <div class="wrapper mt-4 pa-2 rounded-lg d-flex align-center shadow-default">
+    <v-avatar rounded size="80" class="mr-2">
+      <slot name="group-avatar">
+        <v-img :src="require('@/assets/images/dummy-group.jpg')"></v-img>
+      </slot>
+    </v-avatar>
+
+    <div class="ml-3">
+      <div class="font-weight-bold text-subtitle-1">
+        <slot name="title">Teacher's Group</slot>
+      </div>
+      <div class="font-weight-light text-subtitle-2">
+        <slot name="info"> wade warren i'm facing an issue </slot>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'GroupCardUI',
+}
+</script>
+
+<style scoped>
+.wrapper {
+  background: #f9f8fd;
+}
+
+.shadow-default {
+  box-shadow: 3px 3px #a09178;
+}
+
+.shadow-default:hover {
+  box-shadow: none;
+}
+</style>
