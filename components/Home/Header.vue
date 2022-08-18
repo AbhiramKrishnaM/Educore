@@ -4,11 +4,18 @@
   >
     <div class="background-polygon"></div>
 
-    <h1>
+    <h1
+      :class="{
+        'h1-small full-width text-center': $vuetify.breakpoint.smAndDown,
+      }"
+    >
       Your students are doing great <span>60%</span> students has<br />
       completed the test.
     </h1>
-    <div class="illustration-wrapper mr-6">
+    <div
+      class="illustration-wrapper mr-6"
+      :class="{ 'd-none': $vuetify.breakpoint.smAndDown }"
+    >
       <div class="halo first"></div>
       <div class="halo second"></div>
       <div class="halo third"></div>
@@ -29,6 +36,10 @@ export default {
 }
 </script>
 <style scoped>
+.full-width {
+  width: 100%;
+}
+
 .wrapper {
   width: 100%;
   height: 20vh;
@@ -36,9 +47,16 @@ export default {
   position: relative;
 }
 
+/* heading  */
 h1 {
   font-weight: 300;
   font-size: 27px;
+  line-height: 1.4em;
+}
+
+/* heading media >960 */
+.h1-small {
+  font-size: 20px;
   line-height: 1.4em;
 }
 
