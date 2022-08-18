@@ -15,12 +15,13 @@
       :key="index"
       :submission-array-length="studentSubmissions.length"
       :item-index="index"
+      :status="submission.status"
     >
       <template #studentAvatar>
-        <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
+        <v-img :src="submission.student_details.avatar" alt="avatar"></v-img>
       </template>
-      <template #studentName> Abhiram krishna </template>
-      <template #deadline> December 17, 2021 </template>
+      <template #studentName> {{ submission.student_name }} </template>
+      <template #deadline>{{ submission.submission_date }}</template>
     </UiTableBody>
   </div>
 </template>
@@ -29,7 +30,38 @@ export default {
   name: 'TableUI',
   data() {
     return {
-      studentSubmissions: [{}, {}, {}],
+      studentSubmissions: [
+        {
+          id: 0,
+          student_name: 'Abhiram krishna',
+          submission_date: 'December 17, 2021',
+          status: 'opened',
+          student_details: {
+            avatar:
+              'https://cdn.pixabay.com/photo/2021/11/12/03/04/woman-6787784_960_720.png',
+          },
+        },
+        {
+          id: 2,
+          student_name: 'Hari',
+          submission_date: 'March 22, 2021',
+          status: 'active',
+          student_details: {
+            avatar:
+              'https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295429_960_720.png',
+          },
+        },
+        {
+          id: 3,
+          student_name: 'Fahid Hassan',
+          submission_date: 'January 1, 2021',
+          status: 'completed',
+          student_details: {
+            avatar:
+              'https://cdn.pixabay.com/photo/2020/11/22/22/17/male-5768177_960_720.png',
+          },
+        },
+      ],
     }
   },
 }

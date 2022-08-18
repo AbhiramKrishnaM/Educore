@@ -20,7 +20,7 @@
       <span> <slot name="deadline">Date Of Submission</slot></span>
     </v-col>
     <v-col sm="3" class="border-right px-3 py-2">
-      <UiChip chip-type="opened" />
+      <UiChip :chip-type="status" />
     </v-col>
     <v-col sm="1" class="border-right px-3 py-2">
       <v-btn icon plain> <v-icon color="success">mdi-download</v-icon></v-btn>
@@ -40,6 +40,7 @@ export default {
   props: {
     submissionArrayLength: { type: Number, required: true },
     itemIndex: { type: Number, required: true },
+    status: { type: String, required: true, default: 'active' },
   },
   data() {
     return {
