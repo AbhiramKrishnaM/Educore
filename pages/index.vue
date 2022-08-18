@@ -1,6 +1,9 @@
 <template>
   <v-container fluid class="mt-5">
-    <section class="grid-wrap px-3">
+    <section
+      class="grid-wrap px-3"
+      :class="{ 'height-at-sm-and-down': $vuetify.breakpoint.smAndDown }"
+    >
       <HomeHeader
         :class="{
           'grid-column-span-3': $vuetify.breakpoint.mdAndUp,
@@ -10,7 +13,7 @@
       <HomeUserInfo
         :class="{
           'grid-column-span-1 grid-row-span-5': $vuetify.breakpoint.mdAndUp,
-          'grid-column-span-2 grid-row-3-2': $vuetify.breakpoint.smAndDown,
+          'grid-column-span-full  ': $vuetify.breakpoint.smAndDown,
         }"
       />
 
@@ -24,14 +27,14 @@
       <HomeTopStudent
         :class="{
           'grid-column-span-1 grid-row-span-2': $vuetify.breakpoint.mdAndUp,
-          'grid-column-span-2 grid-row-span-2': $vuetify.breakpoint.smAndDown,
+          'grid-column-span-2': $vuetify.breakpoint.smAndDown,
         }"
       />
 
       <HomeGroups
         :class="{
           'grid-column-span-2 grid-row-span-2': $vuetify.breakpoint.mdAndUp,
-          'grid-column-span-full': $vuetify.breakpoint.smAndDown,
+          'grid-column-span-2': $vuetify.breakpoint.smAndDown,
         }"
       />
     </section>
@@ -49,6 +52,10 @@ export default {
   width: 100%;
   height: 100%;
   background-color: grey;
+}
+
+.height-at-sm-and-down {
+  height: 100vh;
 }
 
 .grid-wrap {
@@ -73,6 +80,10 @@ export default {
 
 .grid-column-span-full {
   grid-column: span 4;
+}
+
+.grid-row-span-1 {
+  grid-row: span 1;
 }
 
 .grid-row-span-2 {
