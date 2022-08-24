@@ -84,6 +84,7 @@
         <v-icon color="#858283">mdi-bell-outline</v-icon>
       </v-btn>
     </v-app-bar>
+
     <!--  -->
     <v-main>
       <Nuxt />
